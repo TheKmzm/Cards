@@ -32,7 +32,7 @@ Requirements
     Python 3.8+
     Libraries: tkinter, gtts, pyjokes, rotatescreen, playsound
 
-🚀 How to Run
+## 🚀 How to Run
 GUI Mode (Default)
 
 Run the script directly to launch the graphical interface:
@@ -59,7 +59,7 @@ In CMD Mode, use the following commands:
     pyjoke – Get a random joke.
     exit – Exit the application.
 
-🎴 Card Properties
+## 🎴 Card Properties
 
 Cards are managed using a cards.csv file. Each card has:
 
@@ -105,7 +105,7 @@ Zadejte vlastnost karty: Surprise effect
     Enter the Card Name, Number of Copies, and Property.
     The card will be saved to the deck and the cards.csv file.
 
-📄 License
+## 📄 License
 
 This project is licensed under the MIT License. Feel free to use, modify, and distribute it.
 🖼️ Screenshots
@@ -113,7 +113,7 @@ This project is licensed under the MIT License. Feel free to use, modify, and di
 Main GUI Window:
 
 (Add a screenshot of the GUI window here.)
-🤔 Known Issues
+## 🤔 Known Issues
 
     The rotatescreen feature only works on Windows systems.
     The app may crash if gTTS or playsound cannot access the audio device.
