@@ -1,4 +1,4 @@
-🎴 Card Game Application (Tkinter & CMD Interface)
+#🎴 Card Game Application (Tkinter & CMD Interface)
 
 This is a fun Card Game Application built in Python using Tkinter for the graphical interface and an optional Command-Line Mode. The app allows users to draw cards from a deck, add new cards, tell jokes, rotate the screen, and even play text-to-speech outputs.
 
@@ -7,7 +7,7 @@ The application supports two modes:
     Graphical User Interface (GUI) mode using Tkinter.
     Command-Line (CMD) mode for terminal-based usage.
 
-🛠 Features
+##🛠 Features
 
     🎲 Draw Random Cards: Pull random cards from a customizable deck.
     🃏 Add New Cards: Dynamically add new cards to the deck with custom properties.
@@ -16,7 +16,7 @@ The application supports two modes:
     🎨 Color Easter Egg: Some cards trigger a color-changing background effect.
     🎙️ Text-to-Speech Output: The app can read messages aloud using gTTS.
 
-📥 Installation
+##📥 Installation
 
     Clone the repository:
 
