@@ -37,7 +37,7 @@ This is a fun Card Game Application built in Python using Tkinter for the graphi
 
 #### Run the script directly to launch the graphical interface:
 
-python card_game.py
+    python card_game.py
 
 #### You will see a window with buttons to:
 
