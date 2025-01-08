@@ -91,13 +91,13 @@ K	Special card effect
 
 ### CMD Mode:
 
-Zadejte příkaz: roll
-Card: Ace - otoč obrazovku
+    Zadejte příkaz: roll
+    Card: Ace - otoč obrazovku
 
-Zadejte příkaz: add
-Zadejte název karty: Joker
-Zadejte počet kopií (celé číslo): 2
-Zadejte vlastnost karty: Surprise effect
+    Zadejte příkaz: add
+    Zadejte název karty: Joker
+    Zadejte počet kopií (celé číslo): 2
+    Zadejte vlastnost karty: Surprise effect
 
 ### 📋 How to Add New Cards
 
