@@ -2,7 +2,7 @@
 
 This is a fun Card Game Application built in Python using Tkinter for the graphical interface and an optional Command-Line Mode. The app allows users to draw cards from a deck, add new cards, tell jokes, rotate the screen, and even play text-to-speech outputs.
 
-The application supports two modes:
+### The application supports two modes:
 
     Graphical User Interface (GUI) mode using Tkinter.
     Command-Line (CMD) mode for terminal-based usage.
@@ -18,16 +18,16 @@ The application supports two modes:
 
 ## 📥 Installation
 
-    Clone the repository:
+### Clone the repository:
 
-git clone https://github.com/yourusername/card-game-app.git
-cd card-game-app
+    git clone https://github.com/yourusername/card-game-app.git
+    cd card-game-app
 
-Install required libraries:
+### Install required libraries:
 
     pip install -r requirements.txt
 
-Requirements
+### Requirements
 
     Python 3.8+
     Libraries: tkinter, gtts, pyjokes, rotatescreen, playsound
@@ -35,11 +35,11 @@ Requirements
 ## 🚀 How to Run
 ### GUI Mode (Default)
 
-Run the script directly to launch the graphical interface:
+#### Run the script directly to launch the graphical interface:
 
 python card_game.py
 
-You will see a window with buttons to:
+#### You will see a window with buttons to:
 
     Roll Card: Draw a random card from the deck.
     Add Card: Add a new card to the deck with custom properties.
@@ -48,11 +48,11 @@ You will see a window with buttons to:
 
 ### CMD Mode
 
-To switch to the Command-Line Mode, click the Toggle UI Mode button in the GUI, or launch directly in CMD by running:
+#### To switch to the Command-Line Mode, click the Toggle UI Mode button in the GUI, or launch directly in CMD by running:
 
-python card_game.py
+    python card_game.py
 
-In CMD Mode, use the following commands:
+#### In CMD Mode, use the following commands:
 
     roll – Draw a random card.
     add – Add a new card to the deck.
