@@ -33,7 +33,7 @@ Requirements
     Libraries: tkinter, gtts, pyjokes, rotatescreen, playsound
 
 ## 🚀 How to Run
-GUI Mode (Default)
+### GUI Mode (Default)
 
 Run the script directly to launch the graphical interface:
 
@@ -46,7 +46,7 @@ You will see a window with buttons to:
     Say PyJoke: Tell a random joke.
     Toggle UI Mode: Switch to Command-Line Mode.
 
-CMD Mode
+### CMD Mode
 
 To switch to the Command-Line Mode, click the Toggle UI Mode button in the GUI, or launch directly in CMD by running:
 
@@ -61,20 +61,20 @@ In CMD Mode, use the following commands:
 
 ## 🎴 Card Properties
 
-Cards are managed using a cards.csv file. Each card has:
+### Cards are managed using a cards.csv file. Each card has:
 
     Name – The name of the card (e.g., Ace, King, 5).
     Copies – Number of copies in the deck.
     Property – The special effect of the card.
 
-Example cards.csv file:
+### Example cards.csv file:
 
 name,copies,property
 1,4,Startovací karta
 A,4,Ace - otoč obrazovku
 5,4,Pět bodů
 
-Special Cards:
+### Special Cards:
 Card	Property
 Ace	Rotates the screen
 J	Special card effect
@@ -82,14 +82,14 @@ Q	Special card effect
 K	Special card effect
 🧪 Example Usage
 
-GUI Mode:
+### GUI Mode:
 
     Click Roll Card to draw a random card.
     If the card is an Ace, your screen will rotate!
     Click Add Card to add a new custom card to the deck.
     Click Say PyJoke to hear a random joke.
 
-CMD Mode:
+### CMD Mode:
 
 Zadejte příkaz: roll
 Card: Ace - otoč obrazovku
@@ -99,7 +99,7 @@ Zadejte název karty: Joker
 Zadejte počet kopií (celé číslo): 2
 Zadejte vlastnost karty: Surprise effect
 
-📋 How to Add New Cards
+### 📋 How to Add New Cards
 
     Click the Add Card button in the GUI.
     Enter the Card Name, Number of Copies, and Property.
