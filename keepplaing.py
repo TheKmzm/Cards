@@ -9,19 +9,22 @@ import time
 import os
 import sys
 import csv
+import openai
+from playsound import playsound
+
 
 # Globální proměnné
 rotation_angle = 0
 original_rotation_angle = 0
 buttons_color = "#80e6cc"
 original_bg_color = "#99ffcc"
+fullscreen = False
 original_font = None
 
 smile_button_visible = False
 smile_button = None
 running_easteregg1 = False
-active_ui_mode = False  # True for tkinter UI, False for CMD
-
+active_ui_mode = True  # True for tkinter UI, False for CMD
 cmd_output = None
 
 CARD_FILE = "cards.csv"
@@ -103,6 +106,10 @@ def reset_to_normal():
                 widget.configure(font=original_font)
     running_easteregg1 = False
 
+def counter(start, stop = 0,step = -1):
+    for i in range(start,stop,step):
+        show_timed_message(str(i),'warning',1000)
+
 def roll_card():
     global running_easteregg1
     if not deck:
@@ -119,6 +126,8 @@ def roll_card():
 
     if card == "A":
         rotate_screen()
+    if card in ["5"]:
+        counter(int(card))
     if running_easteregg1 and cards_properties.get(card, "") != "jeb_":
         running_easteregg1 = False
     elif cards_properties.get(card, "").startswith("jeb_"):
@@ -192,8 +201,8 @@ def output(message, voice = 0):
         if voice:
             myobj = gTTS(text=message, lang="en", slow=False)
             myobj.save("helpfile.mp3")
-            os.system("helpfile.mp3")
-            messagebox.showinfo("Info", message)
+            playsound('./helpfile.mp3')
+            messagebox.showinfo('Here it is',message)
             os.remove("helpfile.mp3") 
         else:
             messagebox.showinfo("Info", message)
@@ -203,9 +212,22 @@ def output(message, voice = 0):
 def txt_2_mp3(message):
     myobj = gTTS(text=message, lang="en", slow=False)
     myobj.save("helpfile.mp3")
-    os.system("helpfile.mp3")
+    playsound("helpfile.mp3")
     os.remove("helpfile.mp3") 
 
+def show_timed_message(message, type='info', timeout=1000):
+    root = tk.Tk()
+    root.withdraw()
+    try:
+        root.after(timeout, root.destroy)
+        if type == 'info':
+            messagebox.showinfo('Info', message, master=root)
+        elif type == 'warning':
+            messagebox.showwarning('Warning', message, master=root)
+        elif type == 'error':
+            messagebox.showerror('Error', message, master=root)
+    except:
+        pass
 
 # Načtení karet ze souboru
 load_cards()
@@ -216,6 +238,7 @@ if active_ui_mode:
     w = Label(root,bg=buttons_color, text='Jen tahej nahodne karty.')
     w.pack()
     root.title("Card Game UI")
+    root.attributes('-fullscreen',fullscreen)
     root.configure(bg=original_bg_color)
     # Globální proměnná pro odstranění karet
     remove_cards = tk.BooleanVar(value=True)
